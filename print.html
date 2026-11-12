@@ -1,0 +1,427 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Biological Age &amp; Lifestyle Wiki</title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Plain-language wiki on You, Cui, Chen ... Horvath, Zhang &amp; Ma, iMetaOmics 3:e70127 (2026): biological age clocks, and how physical activity, sleep and diet shape them in the meta-omics era.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="about.html">About</a></li><li class="chapter-item expanded affix "><li class="part-title">Biological Age & Lifestyle</li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> The Big Picture</a></li><li class="chapter-item expanded "><a href="concepts/what-is-biological-age.html"><strong aria-hidden="true">2.</strong> What Is Biological Age?</a></li><li class="chapter-item expanded "><a href="concepts/clock-types.html"><strong aria-hidden="true">3.</strong> The Four Kinds of Ageing Clocks</a></li><li class="chapter-item expanded "><a href="concepts/why-biological-age.html"><strong aria-hidden="true">4.</strong> Why Use Biological Age as the Endpoint</a></li><li class="chapter-item expanded "><a href="concepts/limits.html"><strong aria-hidden="true">5.</strong> Limits of the Clocks</a></li><li class="chapter-item expanded "><a href="concepts/knowledge-map.html"><strong aria-hidden="true">6.</strong> The Research Map (2005–2025)</a></li><li class="chapter-item expanded "><a href="concepts/physical-activity.html"><strong aria-hidden="true">7.</strong> Physical Activity</a></li><li class="chapter-item expanded "><a href="concepts/sleep.html"><strong aria-hidden="true">8.</strong> Sleep</a></li><li class="chapter-item expanded "><a href="concepts/diet.html"><strong aria-hidden="true">9.</strong> Diet</a></li><li class="chapter-item expanded "><a href="concepts/combined-lifestyle.html"><strong aria-hidden="true">10.</strong> How the Three Work Together</a></li><li class="chapter-item expanded "><a href="concepts/roadmap.html"><strong aria-hidden="true">11.</strong> Roadmap for Future Research</a></li><li class="chapter-item expanded "><a href="concepts/implications.html"><strong aria-hidden="true">12.</strong> What It Means For You</a></li><li class="chapter-item expanded "><a href="concepts/glossary.html"><strong aria-hidden="true">13.</strong> Glossary of Clocks & Terms</a></li><li class="chapter-item expanded "><a href="sources/fulltext.html"><strong aria-hidden="true">14.</strong> Full text of the paper</a></li><li class="chapter-item expanded "><a href="sources/references.html"><strong aria-hidden="true">15.</strong> References</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Biological Age &amp; Lifestyle Wiki</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="about"><a class="header" href="#about">About</a></h1>
+<p>This wiki is a plain-language guide to:</p>
+<blockquote>
+<p>You Y, Cui Y, Chen Y, He J, Wang D, Gasevic D, Wu X, Horvath S, Zhang M, Ma X. (2026). “Biological age in the meta omics era: Integrating physical activity, sleep, and diet to reshape paths of healthy ageing.” <em>iMetaOmics</em> 3: e70127. <a href="https://doi.org/10.1002/imo2.70127">doi:10.1002/imo2.70127</a> · Open access, CC BY 4.0.</p>
+</blockquote>
+<p>It was shared on X by Dr David Barzilai (<a href="https://x.com/agingdoc1/status/2118096448562602139">@agingdoc1</a>) on 4 Nov 2026.</p>
+<p>The paper is a short review (about 3,000 words, 20 references). Its authors include <strong>Steve Horvath</strong>, who created the first widely used epigenetic clock. Note his disclosed conflict of interest: the University of California owns patents on epigenetic biomarkers that name him as inventor, he founded and consults for the non-profit that licenses them, and he works at Altos Labs.</p>
+<p>Because the paper is CC BY 4.0, the <a href="sources/fulltext.html">full text</a> and Figure 1 are included here. Figure 2 (the research map) is described in words on the <a href="concepts/knowledge-map.html">Research Map</a> page.</p>
+<p><strong>Repo:</strong> <code>iamflipse/biological-age-omics-wiki</code> · <strong>Live:</strong> https://iamflipse.github.io/biological-age-omics-wiki/ · <strong>All wikis:</strong> https://iamflipse.github.io/</p>
+<p><em>Built with <a href="https://rust-lang.github.io/mdBook/">mdbook</a>.</em></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-big-picture"><a class="header" href="#the-big-picture">The Big Picture</a></h1>
+<p><strong>In one line:</strong> your <em>biological</em> age — how old your body acts, measured from blood, DNA marks, proteins, metabolites or gut bacteria — is a better target for healthy ageing than your birthday, and the three habits with the most evidence for moving it are <strong>physical activity, sleep and diet</strong>.</p>
+<p><img src="img/figure1.jpg" alt="Figure 1: biological age as a bridge from disease to function and resilience" /></p>
+<p><em>Figure 1 from the paper (CC BY 4.0).</em></p>
+<h2 id="the-papers-argument-in-five-steps"><a class="header" href="#the-papers-argument-in-five-steps">The paper's argument in five steps</a></h2>
+<ol>
+<li><strong>Medicine is shifting</strong> from treating single diseases to protecting function and resilience. People the same age differ hugely in decline, illness and survival, and calendar age can't explain why. → <a href="concepts/what-is-biological-age.html">What Is Biological Age?</a></li>
+<li><strong>Biological age can now be measured</strong> with several kinds of &quot;clocks&quot;: blood-test clocks, DNA-methylation clocks, protein and metabolite clocks, and gut-microbiome clocks. → <a href="concepts/clock-types.html">The Four Kinds of Clocks</a></li>
+<li><strong>It makes a better endpoint</strong> because it predicts disability, frailty, multimorbidity and death better than calendar age, reacts to lifestyle, and can be re-measured to track change. → <a href="concepts/why-biological-age.html">Why Use Biological Age</a></li>
+<li><strong>Research exploded after 2017 and again after 2023</strong>, and the biggest lifestyle themes are physical activity, sleep and diet. → <a href="concepts/knowledge-map.html">Research Map</a></li>
+<li><strong>Each habit links to a younger biological age</strong>, probably through inflammation, metabolism and oxidative stress. The three work together. → <a href="concepts/physical-activity.html">Activity</a> · <a href="concepts/sleep.html">Sleep</a> · <a href="concepts/diet.html">Diet</a> · <a href="concepts/combined-lifestyle.html">Together</a></li>
+</ol>
+<h2 id="what-the-paper-does-not-claim"><a class="header" href="#what-the-paper-does-not-claim">What the paper does <em>not</em> claim</a></h2>
+<ul>
+<li>It doesn't present new trial results. It's a review plus a map of the literature.</li>
+<li>It says <strong>no single clock captures whole-body ageing</strong>.</li>
+<li>It says the causal evidence for sleep and activity is <strong>still evolving</strong>. Most findings are associations.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="what-is-biological-age"><a class="header" href="#what-is-biological-age">What Is Biological Age?</a></h1>
+<p><strong>Chronological age</strong> is time since birth. It describes a population but can't explain why two 65-year-olds can be so different, one running and one using a walker (Figure 1, &quot;Same chronological age ≠ biological age&quot;).</p>
+<p><strong>Biological age</strong> estimates ageing status from measurable biological features instead of the calendar. The idea dates back to at least 2003 (ref 3).</p>
+<h2 id="why-it-matters-now"><a class="header" href="#why-it-matters-now">Why it matters now</a></h2>
+<p>The paper describes a shift in healthy-ageing research:</p>
+<div class="table-wrapper"><table><thead><tr><th>Old model</th><th>New model</th></tr></thead><tbody>
+<tr><td>Disease-centred: CVD, cancer, dementia one at a time</td><td>Function- and resilience-centred: functional decline, multimorbidity, resilience</td></tr>
+<tr><td>Adjust for age with a single term</td><td>Use a biologically informed time-scale</td></tr>
+<tr><td>Describe associations</td><td>Build actionable models from lifestyle → molecules → clinical outcomes</td></tr>
+</tbody></table>
+</div>
+<p>The differences between same-age people reflect <strong>long-term modifiable behaviours and environments layered on top of genetics</strong>. That's the opening for lifestyle.</p>
+<blockquote>
+<p>&quot;A biologically informed time‐scale is therefore needed to move healthy ageing research beyond descriptive associations toward actionable models…&quot;</p>
+</blockquote>
+<p>See next: <a href="concepts/clock-types.html">The Four Kinds of Ageing Clocks</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-four-kinds-of-ageing-clocks"><a class="header" href="#the-four-kinds-of-ageing-clocks">The Four Kinds of Ageing Clocks</a></h1>
+<p>The paper sorts biological-age measures into four groups.</p>
+<h2 id="1-clinical-biomarker-clocks"><a class="header" href="#1-clinical-biomarker-clocks">1. Clinical biomarker clocks</a></h2>
+<p><strong>Phenotypic Age (PhenoAge)</strong> combines calendar age with routine blood tests that reflect inflammation, metabolic health, kidney and liver function, and blood-cell health. It sorts people by risk of illness and death better than calendar age alone (ref 4).</p>
+<p><em>Practical note:</em> this is the one you can calculate from a standard blood panel.</p>
+<h2 id="2-dna-methylation-epigenetic-clocks"><a class="header" href="#2-dna-methylation-epigenetic-clocks">2. DNA-methylation (epigenetic) clocks</a></h2>
+<p>Chemical marks on DNA change with age. The paper splits these clocks into two types:</p>
+<div class="table-wrapper"><table><thead><tr><th>Type</th><th>Tracks</th><th>Examples</th></tr></thead><tbody>
+<tr><td><strong>Chronological DNAm age</strong></td><td>Calendar time</td><td>HorvathAge, HannumAge, SkinBloodAge, LinAge, WeidnerAge, VidalBraloAge, ZhangAge</td></tr>
+<tr><td><strong>Health / risk &amp; pace</strong></td><td>Risk of death or illness, or <em>speed</em> of ageing</td><td>DNAm PhenoAge, GrimAge, DNAmTL, DunedinPoAm, DunedinPACE, epiTOC, epiTOC2, MEAT</td></tr>
+</tbody></table>
+</div>
+<p><strong>GrimAge</strong>, a &quot;second-generation&quot; clock, adds methylation stand-ins for plasma proteins and smoking history, which makes it more clinically relevant (ref 5). <strong>DunedinPACE</strong> measures <em>pace</em> (years of ageing per calendar year) rather than an age.</p>
+<h2 id="3-proteomic-and-metabolomic-clocks"><a class="header" href="#3-proteomic-and-metabolomic-clocks">3. Proteomic and metabolomic clocks</a></h2>
+<p>Blood proteins and metabolites shift with age in systematic ways, so they can be built into signatures of disease risk (refs 6–8).</p>
+<h2 id="4-gut-microbiome-clocks"><a class="header" href="#4-gut-microbiome-clocks">4. Gut-microbiome clocks</a></h2>
+<p>Newer estimators based on gut bacteria, which may relate to whole-body inflammation and metabolism (ref 9).</p>
+<p>See the <a href="concepts/glossary.html">Glossary</a> for every clock named in Figure 1.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="why-use-biological-age-as-the-endpoint"><a class="header" href="#why-use-biological-age-as-the-endpoint">Why Use Biological Age as the Endpoint</a></h1>
+<p>The paper places biological age either as <strong>the main outcome</strong> of a study or as <strong>the middle link</strong> (mediator) between lifestyle and function. It gives three reasons:</p>
+<ol>
+<li><strong>Better prediction.</strong> Many measures predict disability, frailty, multimorbidity and all-cause death better than calendar age alone. That turns observational findings into usable risk sorting.</li>
+<li><strong>Sensitive to lifestyle.</strong> They pick up the cumulative effect of environment and behaviour, so researchers can ask how activity, sleep and diet relate to <em>whole-body</em> ageing rather than one disease at a time.</li>
+<li><strong>Re-measurable.</strong> You can test someone repeatedly and model the within-person change, which gives stronger evidence about what comes first and whether an intervention works.</li>
+</ol>
+<p>The organizing chain the paper proposes:</p>
+<p><strong>Lifestyle → multi-omics changes → biological age → function, illness burden, survival</strong></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="limits-of-the-clocks"><a class="header" href="#limits-of-the-clocks">Limits of the Clocks</a></h1>
+<p>The authors are clear about the problems:</p>
+<ul>
+<li><strong>No single clock captures whole-body ageing.</strong> Each one is a partial view.</li>
+<li><strong>Harmonization:</strong> labs and cohorts measure and process things differently, so results are hard to compare and reproduce.</li>
+<li><strong>Calibration:</strong> clocks need quality control and batch correction.</li>
+<li><strong>Ancestry and setting bias:</strong> most clocks were built and tested in a narrow set of populations (mostly US, China, UK and Europe), so they may be off for other groups.</li>
+<li><strong>Black-box models:</strong> many high-dimensional clocks are hard to explain. Clinics need simpler, explainable panels.</li>
+<li><strong>Causation is not settled:</strong> for sleep and activity especially, results can still be skewed by how the behaviour was defined, the sample's ancestry, and leftover socioeconomic differences.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-research-map-20052025"><a class="header" href="#the-research-map-20052025">The Research Map (2005–2025)</a></h1>
+<p>The authors searched the Web of Science on 10 Feb 2026 for papers from 2005 through 2025 linking biological age, omics and lifestyle, and mapped the field (Figure 2). Data and code are on <a href="https://zenodo.org/records/20838343">Zenodo</a>.</p>
+<h2 id="what-they-found"><a class="header" href="#what-they-found">What they found</a></h2>
+<ul>
+<li><strong>Growth (2A):</strong> output sped up after <strong>2017</strong> (DNA-methylation clocks taken up by big cohorts) and again around <strong>2023</strong> (multi-omics, wearables and causal-inference methods). Biological age went from niche to mainstream outcome.</li>
+<li><strong>Fields (2B):</strong> led by geriatrics and gerontology, then nutrition and dietetics, cell biology, neuroscience and genetics. Sport science, public health and internal medicine are also present.</li>
+<li><strong>UN goals (2C):</strong> mostly SDG 3 (good health), then SDG 5 (gender equality) and SDG 2 (zero hunger).</li>
+<li><strong>Countries (2D):</strong> the US and China lead, then the UK, other European countries and Oceania. Singapore stands out for its size.</li>
+<li><strong>Institutions (2E):</strong> University of California system, Harvard, Columbia, NIH, University of London, plus the National University of Singapore and Peking University.</li>
+<li><strong>Topics (2F–H):</strong> a tight core of <em>ageing, biological age, epigenetic age, DNA methylation, physical activity</em>. Outer clusters: mortality and chronic disease, inflammation and biomarkers, telomere length, diet and nutrition, and machine learning.</li>
+</ul>
+<h2 id="what-it-means"><a class="header" href="#what-it-means">What it means</a></h2>
+<p>The field is moving on two tracks at once: <strong>better measurement</strong> (building and validating clocks) and <strong>wider use</strong> (lifestyle, disease risk, public health). Lifestyle studies mostly sit inside a cardiometabolic and inflammation frame.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="physical-activity"><a class="header" href="#physical-activity">Physical Activity</a></h1>
+<p><strong>Finding:</strong> people who <strong>move more and sit less</strong> tend to have a younger biological age, especially on DNA-methylation clocks.</p>
+<ul>
+<li>Population studies generally show that more habitual activity goes with less age acceleration (refs 10, 11).</li>
+<li>With wrist-worn accelerometers, more activity and less sedentary time link to better epigenetic profiles, including slower <em>pace</em> of ageing and less acceleration across several clocks (ref 12).</li>
+</ul>
+<p><strong>Likely why:</strong> activity affects many systems at once: cardiometabolic control, immune function and inflammation.</p>
+<p><strong>Strength of evidence:</strong> consistent, but mostly observational.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sleep"><a class="header" href="#sleep">Sleep</a></h1>
+<p><strong>Finding:</strong> both <strong>too little sleep</strong> and <strong>disturbed sleep</strong> link to older epigenetic age.</p>
+<ul>
+<li>Shorter sleep and insomnia symptoms relate to faster epigenetic ageing (refs 13, 14).</li>
+<li>One study by the lead author found an <strong>inverted U-shape</strong> between sleep duration and Phenotypic Age in US adults (ref 13).</li>
+</ul>
+<p><strong>Likely why:</strong> sleep loss and circadian disruption drive low-grade inflammation, worse glucose control, hormonal changes and oxidative stress, the same systems the death- and illness-predicting clocks track (refs 4, 5).</p>
+<p><strong>Key point:</strong> the evidence favours the <strong>right amount and good quality</strong>, not &quot;more is better&quot;. The relationship may not be linear.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="diet"><a class="header" href="#diet">Diet</a></h1>
+<p><strong>Finding:</strong> higher-quality diets and healthier macronutrient profiles tend to go with a <strong>younger</strong> biological age. Poor diets may go with faster ageing (ref 15).</p>
+<p><strong>Likely why:</strong> sustained effects on inflammation, oxidative stress, mitochondrial function and metabolic balance.</p>
+<p><strong>Caveat:</strong> the diet–clock studies vary a lot in how diet was measured and how well they controlled for other factors.</p>
+<h2 id="trials"><a class="header" href="#trials">Trials</a></h2>
+<p>The bigger step is <strong>multi-part lifestyle trials</strong> that combine diet with exercise, stress management or sleep. Early data suggest biological age measures <strong>may respond within months</strong> in structured programs (ref 16, a small 2021 pilot randomized trial).</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="how-the-three-work-together"><a class="header" href="#how-the-three-work-together">How the Three Work Together</a></h1>
+<p>Activity, sleep and diet <strong>don't act alone</strong>. In real life they can:</p>
+<ul>
+<li><strong>Boost</strong> each other (synergy)</li>
+<li><strong>Cancel</strong> each other (antagonism)</li>
+<li><strong>Stand in</strong> for each other (substitution)</li>
+</ul>
+<p>They probably share common middle steps: <strong>gut microbiome changes, metabolic remodelling, and chronic low-grade inflammation</strong>. That's why the authors argue for multi-omics: measure those middle layers to see <em>how</em> lifestyle reaches biological age.</p>
+<ul>
+<li>Clocks like <strong>DNAm PhenoAge and GrimAge</strong> capture multi-system risk, not just calendar time.</li>
+<li><strong>Protein, metabolite and microbiome clocks</strong> may pick up lifestyle signals that DNA methylation misses.</li>
+</ul>
+<p>The aim: find <strong>which habit matters most, through which pathway, and for whom</strong>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="roadmap-for-future-research"><a class="header" href="#roadmap-for-future-research">Roadmap for Future Research</a></h1>
+<p>The authors' plan for &quot;precision healthy ageing&quot;:</p>
+<ol>
+<li><strong>Use a clear causal chain:</strong> lifestyle → multi-omics → biological age → function, illness and survival.</li>
+<li><strong>Measure people repeatedly over time,</strong> so changes in habits can be shown to come <em>before</em> changes in biological age.</li>
+<li><strong>Use wearables</strong> for detailed, objective behaviour data. Example: the UK Biobank wrist-accelerometer study with tens of thousands of people (ref 18).</li>
+<li><strong>Keep running trials,</strong> both controlled and real-world.</li>
+<li><strong>Standardize:</strong> consistent behaviour definitions, transparent omics processing, quality control and batch correction (refs 17, 19).</li>
+<li><strong>Report models properly:</strong> transparent reporting, external validation, clear intended use (TRIPOD, ref 20).</li>
+<li><strong>Make clocks explainable</strong> so clinics can actually use them.</li>
+<li><strong>Use causal methods:</strong>
+<ul>
+<li><em>Target trial emulation</em>: design an observational analysis as if it were a trial.</li>
+<li><em>Mendelian randomization</em>: use genes as natural experiments.</li>
+<li><em>Mediation modelling</em>: how much of a habit's effect runs <em>through</em> biological age.</li>
+</ul>
+</li>
+<li><strong>Check subgroups:</strong> by starting biological age, income, existing illness and ancestry.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="what-it-means-for-you"><a class="header" href="#what-it-means-for-you">What It Means For You</a></h1>
+<p><em>This page is the wiki's own practical reading of the paper, not the authors' advice.</em></p>
+<ul>
+<li><strong>Your birthday isn't your destiny.</strong> Same-age people differ a lot, and much of that difference comes from habits.</li>
+<li><strong>Focus on the big three:</strong>
+<ul>
+<li><strong>Move more, sit less.</strong> Accelerometer data shows both matter.</li>
+<li><strong>Sleep enough and well.</strong> Aim for the right amount and good quality. More isn't automatically better.</li>
+<li><strong>Eat a high-quality diet</strong> overall rather than chasing one nutrient.</li>
+</ul>
+</li>
+<li><strong>Do them together.</strong> They share pathways (inflammation, metabolism, gut), so they likely add up.</li>
+<li><strong>If you test your biological age:</strong>
+<ul>
+<li>Use the <strong>same clock and lab</strong> each time. Clocks aren't interchangeable.</li>
+<li>Re-test after a few months of steady change. That's the timescale the early trials saw.</li>
+<li><strong>PhenoAge</strong> can be calculated from a standard blood panel. Pace clocks like <strong>DunedinPACE</strong> show speed of ageing rather than an age.</li>
+<li>Treat one result as a snapshot, not a verdict. No single clock captures everything.</li>
+</ul>
+</li>
+<li><strong>Keep it honest:</strong> most of this evidence shows links, not proof that the habit caused the change.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="glossary-of-clocks--terms"><a class="header" href="#glossary-of-clocks--terms">Glossary of Clocks &amp; Terms</a></h1>
+<div class="table-wrapper"><table><thead><tr><th>Term</th><th>Meaning</th></tr></thead><tbody>
+<tr><td><strong>Biological age</strong></td><td>How old your body is acting, estimated from biology instead of the calendar</td></tr>
+<tr><td><strong>Age acceleration</strong></td><td>Biological age minus calendar age. Positive means ageing faster.</td></tr>
+<tr><td><strong>Pace of ageing</strong></td><td>Years of biological ageing per calendar year</td></tr>
+<tr><td><strong>DNAm</strong></td><td>DNA methylation: chemical tags on DNA that shift with age</td></tr>
+<tr><td><strong>Multi-omics / meta-omics</strong></td><td>Measuring many molecular layers at once: genes, methylation, proteins, metabolites, microbes</td></tr>
+<tr><td><strong>PhenoAge</strong></td><td>Phenotypic Age from routine blood tests; also a DNAm version</td></tr>
+<tr><td><strong>GrimAge</strong></td><td>Second-generation DNAm clock using protein and smoking surrogates; strong death predictor</td></tr>
+<tr><td><strong>HorvathAge</strong></td><td>Horvath's pan-tissue DNAm age clock</td></tr>
+<tr><td><strong>HannumAge</strong></td><td>Hannum's blood DNAm age clock</td></tr>
+<tr><td><strong>SkinBloodAge</strong></td><td>Horvath's skin and blood DNAm clock</td></tr>
+<tr><td><strong>LinAge, WeidnerAge, VidalBraloAge, ZhangAge</strong></td><td>Other DNAm clocks that track calendar age</td></tr>
+<tr><td><strong>DNAmTL</strong></td><td>DNAm-based estimate of telomere length</td></tr>
+<tr><td><strong>DunedinPoAm / DunedinPACE</strong></td><td>Dunedin pace-of-ageing methylation measures (PACE is the newer one)</td></tr>
+<tr><td><strong>epiTOC / epiTOC2</strong></td><td>Epigenetic Timer of Cancer: counts cell divisions</td></tr>
+<tr><td><strong>MEAT</strong></td><td>Muscle Epigenetic Age Test</td></tr>
+<tr><td><strong>Healthspan</strong></td><td>Years lived in good health</td></tr>
+<tr><td><strong>Multimorbidity</strong></td><td>Having two or more chronic conditions</td></tr>
+<tr><td><strong>Target trial emulation</strong></td><td>Designing an observational analysis to mimic a randomized trial</td></tr>
+<tr><td><strong>Mendelian randomization</strong></td><td>Using genetic variants as natural experiments to test cause</td></tr>
+<tr><td><strong>TRIPOD</strong></td><td>Reporting standard for prediction models</td></tr>
+<tr><td><strong>SDG</strong></td><td>UN Sustainable Development Goal</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="full-text"><a class="header" href="#full-text">Full Text</a></h1>
+<blockquote>
+<p>You Y, Cui Y, Chen Y, He J, Wang D, Gasevic D, Wu X, Horvath S, Zhang M, Ma X. (2026). “Biological age in the meta omics era: Integrating physical activity, sleep, and diet to reshape paths of healthy ageing.” <em>iMetaOmics</em> 3: e70127. <a href="https://doi.org/10.1002/imo2.70127">doi:10.1002/imo2.70127</a> · Open access, CC BY 4.0.</p>
+<p>Received 8 Jun 2026 · Revised 8 Jul 2026 · Accepted 10 Jul 2026 · Published 30 Jul 2026</p>
+</blockquote>
+<p><em>Reproduced under CC BY 4.0. Section headings are the authors'. Figure 2 image not included; see the <a href="sources/../concepts/knowledge-map.html">Research Map</a>.</em></p>
+<h2 id="abstract"><a class="header" href="#abstract">Abstract</a></h2>
+<p>Biological age provides a translational endpoint linking modifiable lifestyle behaviors—physical activity, sleep, and diet—to multi‐omics changes and downstream clinical outcomes. Integrating multiple ageing clocks with inflammatory, metabolic, and oxidative pathways supports reproducible, intervention‐ready strategies to slow ageing and extend healthspan.</p>
+<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p>The field of healthy ageing is undergoing a visible shift from a disease‐centered paradigm to a function‐centered and resilience‐centered model. Chronological age remains indispensable for describing population structure, yet it is increasingly insufficient for explaining why people of the same age diverge so sharply in functional decline, multimorbidity, and survival <sup><a href="sources/references.html">1</a></sup>. This heterogeneity reflects the long‐term imprint of modifiable behaviors and environments layered onto genetic susceptibility, and it also challenges the conventional practice of relying on age‐stratification or a single age‐adjustment term to solve biological complexity. A biologically informed time‐scale is therefore needed to move healthy ageing research beyond descriptive associations toward actionable models that connect lifestyle patterns to molecular change and clinically meaningful endpoints <sup><a href="sources/references.html">2</a></sup>.</p>
+<p>The term “Biological age” was proposed to capture an individual's ageing status using measurable biological features rather than chronological time, offering an intuitive framework <sup><a href="sources/references.html">3</a></sup>. Over the past two decades, methodological advances have enabled scalable quantification through composite biomarker approaches and omics‐based clocks. To facilitate interpretation, these measures can be classified into distinct categories. Clinical biomarker clocks: Among widely used measures, Phenotypic Age (PhenoAge) integrates chronological age with a weighted panel of routine biochemical and hematological indicators reflecting inflammation, metabolic health, renal/hepatic function, and hematopoietic health—to better stratify morbidity and mortality risk in large cohorts than chronological age alone <sup><a href="sources/references.html">4</a></sup>. DNA‐methylation clocks: Epigenetic clocks derived from DNA methylation signatures represent a landmark development, providing higher‐resolution estimators of ageing. For interpretability, they can be organized into “chronological DNAm age” measures (e.g., HorvathAge, HannumAge) that primarily track calendar time, and “health/risk &amp; pace” measures (e.g., PhenoAge, GrimAge, DunedinPACE) calibrated to mortality/morbidity risk or longitudinal pace of ageing. Second‐generation clocks such as DNAm GrimAge further strengthen clinical relevance by incorporating methylation surrogates for plasma proteins and smoking history <sup><a href="sources/references.html">5</a></sup>. Proteomic and metabolomic clocks: Beyond DNA methylation, large‐scale plasma proteome and metabolome analyses show systematic age‐related shifts, supporting the construction of signatures relevant to disease risk and physiological integrity <sup><a href="sources/references.html">6</a>, <a href="sources/references.html">7</a>, <a href="sources/references.html">8</a></sup>. Gut Microbiome clocks: More recently, gut microbiome‐derived estimators have been proposed to capture ageing‐related changes in host–microbe ecology, which may relate to systemic inflammation and metabolic phenotypes <sup><a href="sources/references.html">9</a></sup>.</p>
+<p>Despite their potential, no single clock fully captures multi‐system ageing, and their broad application faces several challenges. Measurement harmonization and standardization remain a major challenge for reproducibility and for making results comparable across cohorts. Precision ageing studies require robust computation of biological age measures with appropriate quality control and batch correction to address calibration issues. Furthermore, addressing ancestry‐ and setting‐specific bias in biological age inference remains critical as populations diversify.</p>
+<p>To address these challenges and advance precision healthy ageing, it is essential to integrate meta‐omics, biological age, and lifestyle factors. The overarching aim of this review is to articulate the rationale for this integration. Figure [1] summarizes the conceptual model: positioning biological age as a primary endpoint, or as a mediator linking lifestyle exposures to functional outcomes, offers several practical advantages for healthy ageing research. First, many biological age measures provide stronger prediction of downstream outcomes than chronological age alone, including disability, frailty‐relevant phenotypes, multimorbidity, and all‐cause mortality, which is central for translating observational evidence into clinically meaningful risk stratification. Second, biological age measures are more sensitive to cumulative environmental and behavioral influences, supporting analyses that quantify how physical activity, sleep patterns, and diet quality relate to multi‐system ageing burden rather than isolated disease endpoints. Third, biological age is well‐suited to repeated‐measurement designs: within‐person change over time can be modeled as a dynamic outcome, enabling stronger longitudinal inference about temporal ordering and responsiveness to intervention.</p>
+<p><img src="sources/../img/figure1.jpg" alt="Figure 1" /></p>
+<p><strong>Figure 1.</strong> Schematic overview: biological age as a translational bridge from disease to function and resilience. Biological age links disease‐centered outcomes with function‐centered endpoints by integrating chronological DNAm clocks and health‐, risk‐, and pace‐related ageing measures. The framework highlights inter‐individual differences at the same chronological age, dynamic changes over time, and the role of modifiable exposures, including physical activity, sleep, and diet, in shaping healthspan. CVD, cardiovascular disease; DNAm, DNA methylation; DNAm age, DNA methylation age; DNAmTL, DNA methylation‐based telomere length estimator; DunedinPoAm, Dunedin Pace of Aging methylation algorithm; DunedinPACE, Dunedin Pace of Aging Calculated from the Epigenome; epiTOC, Epigenetic Timer of Cancer; epiTOC2, Epigenetic Timer of Cancer‐2; GrimAge, DNA methylation GrimAge; HorvathAge, Horvath DNA methylation age; HannumAge, Hannum DNA methylation age; LinAge, Lin DNA methylation age estimator; MEAT, Muscle Epigenetic Age Test; PhenoAge, Phenotypic Age or DNA methylation PhenoAge; SkinBloodAge, skin and blood DNA methylation age; Vidal‐Bralo DNA methylation age estimator; WeidnerAge, Weidner DNA methylation age estimator; VidalBraloAge, ZhangAge, Zhang DNA methylation age estimator.</p>
+<h2 id="mapping-lifestyle-determinants-of-biological-age-in-the-metaomics-era"><a class="header" href="#mapping-lifestyle-determinants-of-biological-age-in-the-metaomics-era">Mapping lifestyle determinants of biological age in the meta‐omics era</a></h2>
+<p>Building on the rationale for using biological age as a core endpoint, we performed a knowledge map analysis to characterize how the literature has evolved over the past two decades and to visualize the growing integration of biological age research with meta‐omics profiling and modifiable lifestyle behaviors. We searched the Web of Science Core Collection database on 10 February 2026, covering publications from 1 January 2005 to 31 December 2025; the full search strategy, inclusion criteria, and analytical procedures are provided in the supplementary file. This analysis summarizes publication growth, disciplinary distribution, and geographic and institutional contributions, and it delineates the shifting thematic structure of studies linking biological ageing with lifestyle exposures, with particular emphasis on physical activity, sleep, and diet.</p>
+<p>Figure [2A] shows a clear acceleration in annual output after 2017, followed by a second expansion phase around 2023. This temporal pattern is consistent with two shifts in the ageing science literature: first, the rapid uptake of DNA methylation clocks and their application in population cohorts, and second, the more recent consolidation of multi‐omics integration, scalable wearable technologies, and advanced causal inference designs in lifestyle epidemiology. Notably, the surge after 2023 suggests that biological age has moved from a niche methodological construct to a widely adopted outcome framework, increasingly used to quantify inter‐individual heterogeneity in ageing trajectories and to evaluate the health relevance of modifiable exposures.</p>
+<p><strong>Figure 2.</strong> Knowledge map of the research landscape linking biological age with lifestyle behaviors in the meta‐omics era. (A) Annual publication growth (2005–2025) with inflection points highlighted; (B) dominant Web of Science subject categories; (C) mapped SDG themes represented by the literature; (D) top contributing countries by output; (E) leading institutions ranked by publication volume; (F) keyword co‐occurrence network revealing thematic clusters. In panel (F), nodes represent keywords, node size indicates occurrence frequency, links indicate co‐occurrence relationships, link thickness reflects link strength, and colors denote thematic clusters. Keywords are displayed in lower case following VOSviewer preprocessing and export to maintain consistent term normalization; (G) most frequent keywords indicating core research topics; (H) keyword correlation heatmap summarizing co‐occurrence strength across themes.</p>
+<p>The disciplinary distribution (Figure [2B]) further supports this shift toward integrative ageing science. The most productive categories are anchored in geriatrics and gerontology, followed by nutrition and dietetics, cell biology, neuroscience, genetics, and molecular biology‐related areas. Importantly, the presence of sport sciences, public health‐relevant domains, and general internal medicine indicates that biological age is not confined to molecular ageing research; rather, it is increasingly being operationalised as a measurable endpoint linking behavioral exposures, physiological dysregulation, and clinically meaningful outcomes. This breadth reflects the broader logic of the “meta‐omics era,” in which biological age metrics increasingly serve as shared endpoints that facilitate comparison across cohorts, platforms, and exposure definitions.</p>
+<p>From a public health and sustainability perspective, the Sustainable Development Goals (SDGs) mapping (Figure [2C]) demonstrates that this research domain aligns most strongly with SDG 3 (Good Health and Well‐Being), with substantial representation in SDG 5 (Gender Equality) and SDG 2 (Zero Hunger). This pattern reflects how biological age is frequently studied in the context of chronic disease prevention, health disparities, nutrition‐related risk, and sex‐specific ageing profiles. The relatively lower contribution to other SDGs does not imply irrelevance, but rather indicates that current research is still primarily anchored in health endpoints and risk stratification, with fewer studies framed explicitly around environmental sustainability, policy implementation, or cross‐sectoral interventions.</p>
+<p>Global contributions show a concentrated but international research network. Country rankings (Figure [2D]) indicate that the United States and China contribute the largest volume of publications, followed by the United Kingdom and several European and Oceanian countries. This distribution is consistent with the availability of large‐scale cohorts, biobanks, and omics platforms, as well as the analytic infrastructure required for high‐dimensional ageing metrics. At the institutional level, Figure [2E] shows that output is led by major research systems and universities, particularly the University of California System, Harvard University, Columbia University, the National Institutes of Health, and the University of London. The presence of institutions such as the National University of Singapore and Peking University among the leading contributors further suggests that Asian research centers are increasingly visible in this field. Singapore appears as a visible contributor in the country ranking, which is notable given its smaller population base, and likely reflects strategic investment in population health cohorts, digital health infrastructure, and translational ageing research agendas in Asian settings. Collectively, these patterns highlight both the dominance of a few high‐output regions and the growing diversification of study populations, which is essential for external validation and for reducing ancestry‐ and setting‐specific bias in biological age inference. At the same time, the geographic concentration of the literature suggests that many current biological age estimators may be developed and validated within relatively restricted ancestral and sociocultural contexts.</p>
+<p>The thematic structure in Figure [2F–H] clarifies how the field organizes knowledge and what concepts connect lifestyle exposures with ageing metrics. The keyword co‐occurrence network (Figure [2F]) reveals a highly connected core centered on ageing, biological age, epigenetic age, DNA methylation, and physical activity, with peripheral clusters spanning mortality and chronic disease outcomes, inflammation and biomarkers, telomere length, diet and nutrition, and algorithmic approaches such as machine learning. This topology indicates that the literature is simultaneously advancing along two lines: refining biological age measurement (clock construction, validation, and interpretation) and expanding application domains (lifestyle, disease risk, and population health translation).</p>
+<p>Consistent with this, the top keyword frequencies (Figure [2G]) show that “ageing” and “biological age” remain dominant anchors, while “DNA methylation,” “epigenetic clock/age,” “physical activity,” and “telomere length” represent major measurement and exposure pillars. The presence of “mortality,” “frailty,” “inflammation,” and “biomarkers” further suggests that studies are increasingly expected to demonstrate clinical relevance beyond statistical association, often by linking biological age acceleration to functional decline and hard endpoints. Notably, the presence of cohort identifiers among high‐frequency terms suggests that several large public datasets have become widely used reference resources, supporting reproducibility and cross‐study comparability.</p>
+<p>The correlation heatmap (Figure [2H]) provides an interpretable summary of topic co‐appearance patterns. Strong correlations among epigenetic age, DNA methylation, and epigenetic clocks are expected and reflect shared methodological foundations. The clustering of physical activity, diet/nutrition, obesity, inflammation, and mortality suggests that lifestyle exposures are most often examined within cardiometabolic and systemic inflammation frameworks, while biological ageing endpoints are used to quantify cumulative physiological burden. Meanwhile, the co‐appearance of machine learning with multiple ageing‐related terms suggests a growing emphasis on model development, feature selection across omics layers, and predictive performance optimization. Together, these patterns highlight a field that is moving beyond single‐marker studies toward integrated models that combine behavioral exposures, multi‐omics signatures, and clinically interpretable endpoints.</p>
+<h2 id="lifestyle-determinants-of-biological-age-physical-activity-sleep-and-diet"><a class="header" href="#lifestyle-determinants-of-biological-age-physical-activity-sleep-and-diet">Lifestyle determinants of biological age: Physical activity, sleep, and diet</a></h2>
+<p>Building on the macro‐level patterns identified in our knowledge map, the next question is what lifestyle factors are most consistently linked to biological ageing and how these associations manifest across different biological age measures. Our knowledge map analysis showed that physical activity, sleep, and diet appear consistently as major themes, matching the main clusters identified in the knowledge map.</p>
+<p>Across diverse cohorts and measurement frameworks, individuals who move more and sit less tend to exhibit younger biological age profiles, particularly when ageing is quantified using DNA methylation‐based clocks. Epidemiologic evidence generally supports an inverse association between habitual physical activity and biological age acceleration <sup><a href="sources/references.html">10</a>, <a href="sources/references.html">11</a></sup>. Studies using objective monitoring have shown that higher accelerometer‐derived activity and lower sedentary time are associated with more favorable epigenetic ageing profiles, including slower pace‐of‐ageing measures and reduced age acceleration across DNA methylation clocks <sup><a href="sources/references.html">12</a></sup>. Mechanistically, these patterns are consistent with the multi‐system effects of physical activity on cardiometabolic regulation, immune function, and inflammatory tone.</p>
+<p>Sleep duration, sleep continuity, and circadian alignment appear to be linked to biological age acceleration, with evidence suggesting that both insufficient sleep and sleep disturbance are associated with older epigenetic age. In population studies, shorter sleep and insomnia symptoms have been related to faster epigenetic ageing, supporting sleep as a relevant behavioral dimension for biological ageing phenotypes <sup><a href="sources/references.html">13</a>, <a href="sources/references.html">14</a></sup>. Sleep loss and circadian disruption can promote chronic low‐grade inflammation, impair glucose metabolism, alter neuroendocrine regulation, and increase oxidative stress—processes that align with the core physiological domains captured by established mortality‐ and morbidity‐predictive epigenetic clocks <sup><a href="sources/references.html">4</a>, <a href="sources/references.html">5</a></sup>. At present, the evidence is more consistent with the importance of optimal duration and quality than with a simple longer‐is‐better interpretation, and the relationship may be non‐linear.</p>
+<p>Diet quality adds another modifiable layer to biological ageing, and its effects become most informative when interpreted alongside physical activity and sleep within a multi‐omics framework. Dietary exposures likely influence biological ageing trajectories through sustained effects on systemic inflammation, oxidative stress, mitochondrial function, and metabolic homeostasis. While the diet–clock literature is heterogeneous in measurement and confounding control, higher‐quality dietary patterns and healthier macronutrient profiles tend to associate with younger biological age, whereas adverse dietary behaviors may relate to accelerated ageing signatures <sup><a href="sources/references.html">15</a></sup>. Beyond observational evidence, a key methodological advance is the increasing use of multimodal lifestyle interventions to test whether coordinated improvements in diet (often combined with physical activity, stress management, or sleep optimization) can shift epigenetic age metrics over time; early trial data suggest that biological age measures may respond within months under structured programs <sup><a href="sources/references.html">16</a></sup>.</p>
+<p>Moreover, physical activity, sleep, and diet do not operate in isolation. In real‐world settings, these behaviors may also interact through synergistic, antagonistic, or substitution patterns, and their effects may be partly mediated by shared intermediate layers such as gut microbiome dynamics, metabolomic remodeling, and chronic low‐grade inflammation. This joint action is one reason why meta‐omics approaches are increasingly used to connect lifestyle exposures to intermediate molecular signatures and downstream biological age shifts <sup><a href="sources/references.html">17</a></sup>. For example, epigenetic clocks such as DNAm PhenoAge and GrimAge extend beyond chronological prediction by incorporating or correlating with multi‐system risk profiles that better reflect cumulative physiological dysregulation. At the same time, emerging clocks derived from proteomics, metabolomics, and microbiome features offer complementary windows into ageing biology and may capture exposure‐responsive signals that are not fully represented by DNA methylation alone. Integrating these clocks within harmonized analytical and hypothesis‐driven frameworks may help identify which lifestyle components are most strongly associated with biological ageing, through which molecular pathways, and in which populations.</p>
+<h2 id="perspective-for-precision-healthy-ageing-research"><a class="header" href="#perspective-for-precision-healthy-ageing-research">Perspective for precision healthy ageing research</a></h2>
+<p>A practical roadmap for integrating lifestyle behaviors and biological age in precision healthy ageing research begins by formalizing a coherent conceptual pathway linking modifiable lifestyle behaviors to molecular change and downstream clinical relevance. A useful organizing framework is that lifestyle behaviors may shape multi‐omics profiles, which may in turn relate to shifts in biological age and, ultimately, to differences in functional performance, morbidity burden, and survival. Positioning biological age centrally allows clearer hypotheses about exposure responsiveness, biological plausibility, and clinical translation, while enabling harmonized comparisons across heterogeneous cohorts and ageing measures.</p>
+<p>Design choices should prioritize longitudinal evidence capable of capturing within‐person change in both exposures and biological age. Repeated measurement in cohorts provides leverage to separate stable between‐person differences from dynamic trajectories, and to evaluate whether changes in physical activity, sleep, or diet precede shifts in biological age and related omics signatures. Large‐scale wearable studies illustrate how device‐based phenotyping can produce high‐resolution behavioral measures in population settings, supporting finer‐grained modeling of dose, timing, and behavioral patterning. For example, in the UK Biobank accelerometer sub‐study <sup><a href="sources/references.html">18</a></sup>, wrist‐worn accelerometry enabled scalable quantification of physical activity behaviors in tens of thousands of participants, highlighting feasibility for future repeated assessments and integration into ageing research pipelines. Beyond cohorts, randomized trials and pragmatic interventions remain essential, particularly when the goal is to establish behavioral effects on biological age change under controlled or real‐world conditions.</p>
+<p>Measurement harmonization and standardization remain a major obstacle to reproducibility and to meaningful comparisons across cohorts. Precision healthy ageing studies require consistent construction of behavioral phenotypes, transparent pre‐processing of omics data, and robust computation of biological age measures with appropriate quality control and batch correction. Methodological guidance from the multi‐omics literature emphasizes that integrative designs must be aligned with biological questions and supported by rigorous analytic validation, rather than treated as purely data‐driven exercises <sup><a href="sources/references.html">17</a>, <a href="sources/references.html">19</a></sup>. In parallel, biological age models and risk‐prediction tools should adhere to transparent reporting, external validation, and clarity on intended use <sup><a href="sources/references.html">20</a></sup>.</p>
+<p>For biological age measures to become clinically actionable, future work will need to move beyond high‐dimensional black‐box prediction toward more explainable biomarker panels and risk‐stratification frameworks that can be communicated, validated, and implemented in practice. Target trial emulation provides a structured approach to defining the causal question, eligibility criteria, treatment strategies, follow‐up, and outcomes in observational datasets, improving interpretability and reducing design‐related biases when randomized trials are infeasible. Mendelian randomization offers complementary evidence by using genetic variants as instruments to test causal relevance of exposures or intermediate pathways, while requiring careful assessment of assumptions and pleiotropy. At present, however, causal evidence for lifestyle exposures such as sleep and physical activity remains evolving and may still be influenced by phenotype definition, sample ancestry, and residual socioeconomic structure. These approaches can be combined with mediation and multi‐stage modeling to evaluate how much of a lifestyle effect on functional endpoints is captured through biological age change versus other mechanisms. Future work should also examine whether associations differ across population subgroups, such as individuals with different baseline biological age levels, socioeconomic backgrounds, comorbidity profiles, and ancestral backgrounds.</p>
+<h2 id="conflict-of-interest"><a class="header" href="#conflict-of-interest">Conflict of interest</a></h2>
+<p>The Regents of the University of California are the sole owners of patents and patent applications directed at epigenetic biomarkers for which Steve Horvath is a named inventor. S. H. is a founder and paid consultant of the non‐profit Epigenetic Clock Development Foundation that licenses these patents. S. H. is a Principal Investigator at the Altos Labs, Cambridge Institute of Science, a biomedical company.</p>
+<h2 id="data-availability"><a class="header" href="#data-availability">Data availability</a></h2>
+<p>Data and analysis code: https://zenodo.org/records/20838343</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="references"><a class="header" href="#references">References</a></h1>
+<ol>
+<li>Moqri, Mahdi, Herzog Chiara, Poganik Jesse R., Ying Kejun, Justice Jamie N., Belsky Daniel W., Higgins‐Chen Albert T., et al. 2024. “Validation of Biomarkers of Aging.” Nature Medicine 30: 360–372. <a href="https://doi.org/10.1038/s41591-023-02784-9">10.1038/s41591-023-02784-9</a></li>
+<li>López‐Otín, Carlos, Blasco Maria A., Partridge Linda, Serrano Manuel, and Kroemer Guido. 2013. “The Hallmarks of Aging.” Cell 153: 1194–1217. <a href="https://doi.org/10.1016/j.cell.2013.05.039">10.1016/j.cell.2013.05.039</a></li>
+<li>Jackson, Stephen H. D., Weale Martin R., and Weale Robert A.. 2003. “Biological Age‐‐What Is It and Can It Be Measured?” Archives of Gerontology and Geriatrics 36: 103–115. <a href="https://doi.org/10.1016/s0167-4943(02)00060-2">10.1016/s0167-4943(02)00060-2</a></li>
+<li>Levine, Morgan E., Lu Ake T., Quach Austin, Chen Brian H., Assimes Themistocles L., Bandinelli Stefania, Hou Lifang, et al. 2018. “An Epigenetic Biomarker of Aging for Lifespan and Healthspan.” Aging 10: 573–591. <a href="https://doi.org/10.18632/aging.101414">10.18632/aging.101414</a></li>
+<li>Lu, Ake T., Quach Austin, Wilson James G., Reiner Alex P., Aviv Abraham, Raj Kenneth, Hou Lifang, et al. 2019. “DNA Methylation GrimAge Strongly Predicts Lifespan and Healthspan.” Aging 11: 303–327. <a href="https://doi.org/10.18632/aging.101684">10.18632/aging.101684</a></li>
+<li>Lehallier, Benoit, Gate David, Schaum Nicholas, Nanasi Tibor, Lee Song Eun, Yousef Hanadie, Moran Losada Patricia, et al. 2019. “Undulating Changes in Human Plasma Proteome Profiles Across the Lifespan.” Nature Medicine 25: 1843–1850. <a href="https://doi.org/10.1038/s41591-019-0673-2">10.1038/s41591-019-0673-2</a></li>
+<li>Shi, Chun‐Lin, Chen Tong, Lan Canhui, Gan Ren‐You, Yu Jun, Zhao Fangqing, and Liu Yong‐Xin. 2024. “iMetaOmics: Advancing Human and Environmental Health Through Integrated Meta‐Omics.” iMetaOmics 1: e21. <a href="https://doi.org/10.1002/imo2.21">10.1002/imo2.21</a></li>
+<li>Zhang, Feng, Li Rong, Liu Yasong, Liang Jinliang, Gong Yihang, Xiao Cuicui, Cai Jianye, et al. 2025. “Integrative Cross‐Tissue Analysis Unveils Complement‐Immunoglobulin Augmentation and Dysbiosis‐Related Fatty Acid Metabolic Remodeling During Mammalian Aging.” iMeta 4: e70027. <a href="https://doi.org/10.1002/imt2.70027">10.1002/imt2.70027</a></li>
+<li>Xu, Xinming, Feng Qingying, Zhang Tao, Gao Yunlong, Cheng Qu, Zhang Wanqiu, Wu Qinglong, et al. 2024. “Infant Age Inversely Correlates with Gut Carriage of Resistance Genes, Reflecting Modifications in Microbial Carbohydrate Metabolism During Early Life.” iMeta 3: e169. <a href="https://doi.org/10.1002/imt2.169">10.1002/imt2.169</a></li>
+<li>You, Yanwei, Chen Yuquan, Ding Hao, Liu Qiyu, Wang Rui, Xu Kailin, Wang Qingyuan, Gasevic Danijela, and Ma Xindong. 2025. “Relationship Between Physical Activity and DNA Methylation‐Predicted Epigenetic Clocks.” NPJ Aging 11: 27. <a href="https://doi.org/10.1038/s41514-025-00217-0">10.1038/s41514-025-00217-0</a></li>
+<li>You, Yanwei, Li Jinwei, Zhang Yang, Liu Qiyu, Ablitip Alimjan, Lao Yongjie, Wang Jingtong, et al. 2025. “Exploring the Role of β2‐Microglobulin in the Relationship Between Physical Activity and DNAm‐predicted PhenoAge: Evidence From a Population‐Based and Mice Single‐Cell RNA‐Sequencing Study.” Journal of Advanced Research. <a href="https://doi.org/10.1016/j.jare.2025.11.047">10.1016/j.jare.2025.11.047</a></li>
+<li>Spartano, Nicole L., Ruiqi Wang, Qiong Yang, Ariel Chernofsky, Murabito Joanne M, Ramachandran S Vasan, Daniel Levy, Alexa S Beiser, and Sudha Seshadri.. 2023. “Association of Accelerometer‐Measured Physical Activity and Sedentary Time with Epigenetic Markers of Aging.” Medicine &amp; Science in Sports &amp; Exercise 55: 264–272. <a href="https://doi.org/10.1249/MSS.0000000000003041">10.1249/MSS.0000000000003041</a></li>
+<li>You, Yanwei, Chen Yuquan, Liu Ruidong, Zhang Yangchang, Wang Meiqing, Yang Zihao, Liu Jianxiu, and Ma Xindong. 2024. “Inverted U‐Shaped Relationship Between Sleep Duration and Phenotypic Age in US Adults: A Population‐Based Study.” Scientific Reports 14: 6247. <a href="https://doi.org/10.1038/s41598-024-56316-7">10.1038/s41598-024-56316-7</a></li>
+<li>Carroll, Judith E., Irwin Michael R., Levine Morgan, Seeman Teresa E., Absher Devin, Assimes Themistocles, and Horvath Steve. 2017. “Epigenetic Aging and Immune Senescence in Women With Insomnia Symptoms: Findings From the Women's Health Initiative Study.” Biological Psychiatry 81: 136–144. <a href="https://doi.org/10.1016/j.biopsych.2016.07.008">10.1016/j.biopsych.2016.07.008</a></li>
+<li>Kim, Youjin, Huan Tianxiao, Joehanes Roby, McKeown Nicola M., Horvath Steve, Levy Daniel, and Ma Jiantao. 2022. “Higher Diet Quality Relates to Decelerated Epigenetic Aging.” The American Journal of Clinical Nutrition 115: 163–170. <a href="https://doi.org/10.1093/ajcn/nqab201">10.1093/ajcn/nqab201</a></li>
+<li>Fitzgerald, Kara N., Hodges Romilly, Hanes Douglas, Stack Emily, Cheishvili David, Szyf Moshe, Henkel Janine, et al. 2021. “Potential Reversal of Epigenetic Age Using a Diet and Lifestyle Intervention: A Pilot Randomized Clinical Trial.” Aging 13: 9419–9432. <a href="https://doi.org/10.18632/aging.202913">10.18632/aging.202913</a></li>
+<li>Hasin, Yehudit, Seldin Marcus, and Lusis Aldons. 2017. “Multi‐Omics Approaches to Disease.” Genome Biology 18: 83. <a href="https://doi.org/10.1186/s13059-017-1215-1">10.1186/s13059-017-1215-1</a></li>
+<li>Doherty, Aiden, Jackson Dan, Hammerla Nils, Plötz Thomas, Olivier Patrick, Granat Malcolm H., White Tom, et al. 2017. “Large Scale Population Assessment of Physical Activity Using Wrist Worn Accelerometers: The UK Biobank Study.” PLoS One 12: e0169649. <a href="https://doi.org/10.1371/journal.pone.0169649">10.1371/journal.pone.0169649</a></li>
+<li>You, Yanwei . 2026. “Single‐Cell Sequencing in Exercise Medicine: From Tissue Responses to Precision Exercise Biomarkers.” LabMed Discovery 3: 100129. <a href="https://doi.org/10.1016/j.lmd.2026.100129">10.1016/j.lmd.2026.100129</a></li>
+<li>Collins, Gary S., Reitsma Johannes B., Altman Douglas G., and Moons Karel G. M.. 2015. “Transparent Reporting of a Multivariable Prediction Model for Individual Prognosis or Diagnosis (TRIPOD): The TRIPOD Statement.” Annals of Internal Medicine 162: 55–63. <a href="https://doi.org/10.7326/M14-0697">10.7326/M14-0697</a></li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>
