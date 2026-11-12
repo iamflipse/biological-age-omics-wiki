@@ -1,0 +1,7 @@
+[book]
+title = "Biological Age & Lifestyle Wiki"
+authors = ["iamflipse"]
+description = "Plain-language wiki on You, Cui, Chen ... Horvath, Zhang & Ma, iMetaOmics 3:e70127 (2026): biological age clocks, and how physical activity, sleep and diet shape them in the meta-omics era."
+
+[build]
+charset = "utf-8"
